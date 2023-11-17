@@ -1,0 +1,37 @@
+from django.urls import path
+from .views import *
+
+urlpatterns = [
+    path('index/',index),
+    path('seller_login/',seller_login),
+    path('seller_reg/',seller_reg),
+    path('add_product/',addproduct),
+    path('seller_profile/',seller_profile),
+    path('edit_seller_profile/<int:id>',edit_seller_profile),
+    path('product_view/',product_view, name='product_view'),
+    path('filter_product_view/<item>',filt_product_view, name='filter_product_view'),
+    path('edit_product/<int:id>',edit_product),
+    path('buyer_reg/',buyer_reg),
+    path('buyer_log/',buyer_login),
+    path('buyer_profile/',buyer_profile),
+    path('buyer_logout/',buyer_logout),
+    path('edit_buyer_profile/',edit_buyer_profile),
+    path('buyer_index/',buyer_index),
+    path('wishlist/<int:id>',prod_wishlist),
+    path('wishlist_view/',wishlist_view),
+    path('del_wish/<int:id>',delete_wish),
+    path('cart/<int:id>',prod_cart),
+    path('cart_view/',cart_view),
+    path('del_cart/<int:id>',delete_cart),
+    path('cartinc/<int:id>',cartinc),
+    path('cartdec/<int:id>',cartdec),
+    path('buyer_address/',buyer_address),
+    path('edit_buyer_address/',edit_buyer_address),
+    path('delivery_details/',details_delivery),
+    path('deliver_display/',deliver_display),
+    path('buyer_product_view/',buyer_product_view),
+    path('order_details/',order_details),
+    # path('user_delivery_details/',user_delivery_details),
+    path('buyer_payments/',buyer_payments),
+
+]

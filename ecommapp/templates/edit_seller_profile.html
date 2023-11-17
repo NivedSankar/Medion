@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background: rgb(22,184,200);
+background: linear-gradient(90deg, rgba(22,184,200,1) 0%, rgba(17,45,220,1) 100%);">
+    <div style="height: 868px; width: 650px; background-color: white;  margin-left: 30%; margin-top: 1%; border-radius: 15px; box-shadow: 7px 7px 7px;">
+        <h1 style="margin-left: 25%; color: rgb(6, 6, 6);">Seller Registration</h1>
+        <form method="post" enctype="multipart/form-data">{% csrf_token %}
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" style="margin-left: 20%; margin-top: 3%;">Seller Name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Seller Name" style="width: 60%; margin-left: 20%;" name="sname" value="{{data.sname}}">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" style="margin-left: 20%; margin-top: 0%;">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email" style="width: 60%; margin-left: 20%;" name="email" value="{{data.email}}">
+              </div>
+            <img src="/static/images/{{img}}" width="150px" height="150px" style="margin-left:20%;">
+            <div class="mb-3">
+            <label for="formFile" class="form-label" style="font-size: 20px; margin-left: 20%; margin-top: 0%;">Insert Profile Picture</label>
+            <input class="form-control" type="file" id="formFile" style="width: 60%; margin-left: 20%;" name="img_name">
+          </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" style="margin-left: 20%; margin-top: 0%;">Phone Number</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Phone Number" style="width: 60%; margin-left: 20%;" name="phone" value="{{data.phone}}">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" style="margin-left: 20%; margin-top: 0%;">Company Name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Company Name" style="width: 60%; margin-left: 20%;" name="cname" value="{{data.cname}}">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label" style="margin-left: 20%;">Company Details</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="width: 60%; margin-left: 20%;" name="com_details">{{data.com_details}}</textarea>
+              </div>
+<!--              <div class="mb-3">-->
+<!--                <label for="exampleFormControlInput1" class="form-label" style="margin-left: 20%; margin-top: 0%;">Password</label>-->
+<!--                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Enter Password" style="width: 60%; margin-left: 20%;" name="password">-->
+<!--              </div>-->
+<!--              <div class="mb-3">-->
+<!--                <label for="exampleFormControlInput1" class="form-label" style="margin-left: 20%; margin-top: 0%;"> Confirm Password</label>-->
+<!--                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Confirm Password" style="width: 60%; margin-left: 20%;" name="cpassword">-->
+<!--              </div>-->
+              <button type="submit" class="btn btn-danger" style="margin-left: 40%;">Edit Profile</button>
+        </form>
+
+    </div>
+</body>
+</html>
